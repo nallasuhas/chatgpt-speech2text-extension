@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Speech to ChatGPT",
+    "version": "1.0",
+    "description": "Convert speech to text and send it to ChatGPT.",
+    "permissions": [ "activeTab", "tabs","scripting", "tabCapture" ],
+   
+    "action": {
+      
+    },
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://chatgpt.com/*", "https://claude.ai/*"],
+             "js": ["content.js"]
+        }
+    ]
+  }
+  
