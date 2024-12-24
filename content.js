@@ -23,7 +23,7 @@ function initializeSpeechRecognition() {
     const activeInputElement = document.querySelector('div#prompt-textarea p')
     // Update input field with transcribed text
     if (activeInputElement) {
-      activeInputElement.innerText = activeInputElement.value + finalTranscript;
+      activeInputElement.innerText =  finalTranscript;
     }
   };
 
